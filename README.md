@@ -1,11 +1,11 @@
 # react-native-certificate
 
-certificate
+RSA by openssl and AES for certificate
 
 ## Installation
 
 ```sh
-npm install react-native-certificate
+yarn add react-native-certificate
 ```
 
 ## Usage
@@ -15,7 +15,14 @@ import Certificate from "react-native-certificate";
 
 // ...
 
-const result = await Certificate.multiply(3, 7);
+const result = await Certificate.decrypt();
+const result = await Certificate.generateKeys();
+const result = await Certificate.getPublicKey();
+const result = await Certificate.getCertificate();
+const result = await Certificate.saveCertificate();
+const result = await Certificate.getAesKey();
+const result = await Certificate.getEncryptedCert();
+const result = await Certificate.getEncryptedWithAES();
 ```
 
 ## Contributing
